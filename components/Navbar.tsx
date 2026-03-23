@@ -8,7 +8,8 @@ const links = [
   { href: "#features",     label: "Features" },
   { href: "#how-it-works", label: "How It Works" },
   { href: "#pricing",      label: "Pricing" },
-  { href: "#download",     label: "Download" },
+  { href: "#faq",          label: "FAQ" },
+  { href: "#download",     label: "Early Access" },
 ];
 
 export default function Navbar() {
@@ -61,10 +62,10 @@ export default function Navbar() {
         {/* Desktop CTA + mobile toggle */}
         <div className="flex items-center gap-3">
           <a
-            href="#download"
+            href="mailto:anup.kr.2908@gmail.com?subject=Early Access Request - AI Munim&body=Hi, I would like early access to AI Munim."
             className="hidden md:inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-gradient-to-r from-[#00FFA3] to-[#00D4FF] text-[#04050A] text-sm font-semibold hover:shadow-lg hover:shadow-[#00FFA3]/30 hover:scale-105 transition-all duration-300"
           >
-            Start Free Trial
+            Get Early Access
           </a>
 
           <button
@@ -100,11 +101,11 @@ export default function Navbar() {
                 </a>
               ))}
               <a
-                href="#download"
+                href="mailto:anup.kr.2908@gmail.com?subject=Early Access Request - AI Munim"
                 onClick={() => setMenuOpen(false)}
                 className="mt-3 flex justify-center py-3.5 rounded-xl bg-gradient-to-r from-[#00FFA3] to-[#00D4FF] text-[#04050A] font-semibold text-sm"
               >
-                Start Free Trial
+                Get Early Access
               </a>
             </div>
           </motion.div>

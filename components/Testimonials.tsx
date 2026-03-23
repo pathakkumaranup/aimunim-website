@@ -109,7 +109,7 @@ export default function Testimonials() {
             <span className="text-gradient">राय</span>
           </h2>
           <p className="text-white/50 text-lg">
-            Join 10,000+ happy shopkeepers across India
+            Real shopkeepers. Real results. Trusted across India.
           </p>
         </motion.div>
       </div>
