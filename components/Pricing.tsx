@@ -186,11 +186,11 @@ export default function Pricing() {
             </ul>
 
             <a
-              href="#download"
+              href="mailto:anup.kr.2908@gmail.com?subject=Early Access Request - AI Munim Subscription&body=Hi, I would like early access and information about the subscription plans."
               className="block text-center py-3.5 rounded-xl text-sm font-bold text-[#04050A] hover:shadow-2xl hover:shadow-[#00FFA3]/30 transition-all duration-300"
               style={{ background: "linear-gradient(135deg, #00FFA3, #00D4FF)" }}
             >
-              Get Started
+              Request Early Access
             </a>
           </motion.div>
 

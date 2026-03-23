@@ -276,15 +276,18 @@ export default function Hero() {
                 href="#download"
                 className="group inline-flex items-center gap-2 px-7 py-4 rounded-2xl bg-gradient-to-r from-[#00FFA3] to-[#00D4FF] text-[#04050A] font-bold text-base hover:shadow-2xl hover:shadow-[#00FFA3]/35 hover:scale-[1.04] transition-all duration-300"
               >
-                Start Free Trial
+                Request Early Access
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </a>
-              <button className="inline-flex items-center gap-2.5 px-7 py-4 rounded-2xl glass border border-white/10 text-white/75 hover:text-white hover:border-white/20 transition-all duration-300 font-semibold">
+              <a
+                href="mailto:anup.kr.2908@gmail.com?subject=AI Munim - Demo Request"
+                className="inline-flex items-center gap-2.5 px-7 py-4 rounded-2xl glass border border-white/10 text-white/75 hover:text-white hover:border-white/20 transition-all duration-300 font-semibold"
+              >
                 <div className="w-6 h-6 rounded-full border border-[#00D4FF]/50 flex items-center justify-center">
                   <Play className="w-2.5 h-2.5 text-[#00D4FF] ml-0.5" fill="#00D4FF" />
                 </div>
-                Watch Demo
-              </button>
+                Contact for Demo
+              </a>
             </motion.div>
 
             {/* Trust row */}

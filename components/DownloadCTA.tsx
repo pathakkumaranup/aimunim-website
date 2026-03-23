@@ -1,12 +1,12 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Mic, ArrowRight, Smartphone, Shield, Zap } from "lucide-react";
+import { Mic, ArrowRight, Mail, Shield, Zap, Clock, Smartphone } from "lucide-react";
 
 const perks = [
-  { icon: Zap,       label: "14-day free trial" },
-  { icon: Shield,    label: "No credit card needed" },
-  { icon: Smartphone,label: "Android & iOS" },
+  { icon: Zap,       label: "14-day free trial, no credit card" },
+  { icon: Shield,    label: "Cancel anytime during trial" },
+  { icon: Clock,     label: "Response within 24 hours" },
 ];
 
 export default function DownloadCTA() {
@@ -55,32 +55,40 @@ export default function DownloadCTA() {
             <Mic className="w-12 h-12 text-[#04050A]" strokeWidth={2} />
           </motion.div>
 
+          {/* Early access badge */}
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold mb-6"
+            style={{ background: "rgba(155,93,229,0.15)", border: "1px solid rgba(155,93,229,0.3)", color: "#C77DFF" }}>
+            <span className="w-1.5 h-1.5 rounded-full bg-[#C77DFF] animate-pulse" />
+            Early Access — Android App Launching Soon
+          </div>
+
           <h2 className="text-5xl md:text-6xl font-bold mb-5 leading-tight">
-            आज ही शुरू करो{" "}
-            <span className="text-gradient">Free में</span>
+            Early Access{" "}
+            <span className="text-gradient">शुरू हो गया</span>
           </h2>
-          <p className="text-white/55 text-xl mb-12 max-w-xl mx-auto leading-relaxed">
-            14-day free trial. No credit card. Just download and start speaking.
+          <p className="text-white/55 text-xl mb-4 max-w-xl mx-auto leading-relaxed">
+            AI Munim is currently in early access. Request access and we'll send you the app directly — with a full 14-day free trial, no credit card required.
+          </p>
+          <p className="text-white/32 text-sm mb-10 max-w-lg mx-auto">
+            Play Store listing coming soon. Early users get priority onboarding and extended trial support.
           </p>
 
           {/* CTA buttons */}
           <div className="flex flex-wrap gap-4 justify-center mb-10">
             <motion.a
-              href="#"
+              href="mailto:anup.kr.2908@gmail.com?subject=Early Access Request - AI Munim&body=Hi, I would like to request early access to AI Munim. My shop type is: "
               className="group flex items-center gap-3 px-8 py-4 rounded-2xl font-bold text-lg text-[#04050A] transition-all duration-300"
-              style={{
-                background: "linear-gradient(135deg, #00FFA3, #00D4FF)",
-              }}
+              style={{ background: "linear-gradient(135deg, #00FFA3, #00D4FF)" }}
               whileHover={{ scale: 1.05, boxShadow: "0 20px 60px rgba(0,255,163,0.4)" }}
               whileTap={{ scale: 0.97 }}
             >
-              <Smartphone className="w-5 h-5" />
-              Download for Android
+              <Mail className="w-5 h-5" />
+              Request Early Access
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </motion.a>
 
             <motion.a
-              href="#"
+              href="mailto:anup.kr.2908@gmail.com?subject=AI Munim - General Enquiry"
               className="group flex items-center gap-3 px-8 py-4 rounded-2xl font-semibold text-lg text-white hover:text-white transition-all duration-300"
               style={{
                 background: "rgba(255,255,255,0.05)",
@@ -90,7 +98,7 @@ export default function DownloadCTA() {
               whileTap={{ scale: 0.97 }}
             >
               <Smartphone className="w-5 h-5 text-[#00D4FF]" />
-              Download for iOS
+              Contact for Demo
             </motion.a>
           </div>
 
