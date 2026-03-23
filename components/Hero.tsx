@@ -327,9 +327,9 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 1 }}
         >
           <div className="grid grid-cols-3 gap-8 max-w-lg mx-auto lg:max-w-none lg:grid-cols-3">
-            <Stat value="10,000+" label="दुकानदार Active" delay={0} />
-            <Stat value="₹5 Cr+"   label="Tracked Monthly" delay={0.12} />
-            <Stat value="4.9 ★"    label="App Rating" delay={0.24} />
+            <Stat value="🇮🇳" label="Made in India" delay={0} />
+            <Stat value="Hindi" label="Voice Support" delay={0.12} />
+            <Stat value="14 Days" label="Free Trial" delay={0.24} />
           </div>
         </motion.div>
       </div>

@@ -239,16 +239,33 @@ export default function Pricing() {
           </motion.div>
         </div>
 
-        {/* Reassurance */}
-        <motion.p
-          className="text-center text-sm text-white/30 mt-10"
+        {/* Refund note */}
+        <motion.div
+          className="flex flex-wrap justify-center gap-x-6 gap-y-1 mt-6 text-sm text-white/32"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.5 }}
         >
-          All plans include a 14-day free trial · Cancel anytime · Secure payments via Razorpay
-        </motion.p>
+          <span>✓ 14-day free trial — no credit card required</span>
+          <span>✓ Cancel anytime during trial, no charges</span>
+          <span>✓ Refunds available as per our <a href="/refund" className="text-[#00FFA3] hover:underline">Refund Policy</a></span>
+        </motion.div>
+
+        {/* Payment clarification */}
+        <motion.div
+          className="max-w-2xl mx-auto mt-10 rounded-2xl border border-white/[0.07] bg-white/[0.02] px-6 py-5 text-center"
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.6 }}
+        >
+          <p className="text-white/55 text-sm leading-relaxed">
+            <span className="font-semibold text-white/75">AI Munim is a software-as-a-service (SaaS) subscription.</span>{" "}
+            Payments are for access to the app only. AI Munim does not provide any financial services, lending, credit, or investment products.
+            All transactions are processed securely via Razorpay.
+          </p>
+        </motion.div>
       </div>
     </section>
   );

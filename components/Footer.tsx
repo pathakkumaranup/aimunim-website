@@ -1,12 +1,10 @@
-import { Mic } from "lucide-react";
+import { Mic, Mail, MapPin, Clock } from "lucide-react";
 
-const productLinks = ["Features", "How It Works", "Pricing", "Download", "Changelog"];
+const productLinks = ["Features", "How It Works", "Pricing", "Download"];
 const legalLinks: { label: string; href: string }[] = [
   { label: "Privacy Policy",   href: "/privacy" },
   { label: "Terms of Service", href: "/terms" },
   { label: "Refund Policy",    href: "/refund" },
-  { label: "Contact Us",       href: "mailto:anup.kr.2908@gmail.com" },
-  { label: "Support",          href: "mailto:anup.kr.2908@gmail.com" },
 ];
 
 export default function Footer() {
@@ -22,7 +20,7 @@ export default function Footer() {
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="grid md:grid-cols-4 gap-10 mb-14">
-          {/* Brand column */}
+          {/* Brand + About column */}
           <div className="md:col-span-2">
             <a href="#" className="inline-flex items-center gap-2.5 mb-5">
               <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-[#00FFA3] to-[#00D4FF] flex items-center justify-center shadow-lg shadow-[#00FFA3]/20">
@@ -33,33 +31,53 @@ export default function Footer() {
                 <span className="text-white">Munim</span>
               </span>
             </a>
-            <p className="text-white/38 text-sm leading-relaxed max-w-[280px] mb-6">
-              Voice-powered ledger for Indian shopkeepers. Track udhaar, manage customers, and grow your business — just by speaking.
+            <p className="text-white/50 text-sm leading-relaxed max-w-[340px] mb-3">
+              AI Munim is a voice-powered digital ledger app built for Indian shopkeepers and small business owners.
+              It lets you record udhaar, manage customer accounts, and track balances — simply by speaking in Hindi, English, or Hinglish.
             </p>
-
-            {/* Social icons (placeholder) */}
-            <div className="flex gap-2.5">
-              {[
-                { label: "Twitter",   emoji: "𝕏" },
-                { label: "Facebook",  emoji: "f" },
-                { label: "Instagram", emoji: "⬡" },
-                { label: "YouTube",   emoji: "▶" },
-              ].map((s) => (
-                <button
-                  key={s.label}
-                  aria-label={s.label}
-                  className="w-9 h-9 rounded-xl glass border border-white/[0.07] flex items-center justify-center text-white/40 hover:text-white hover:border-white/20 transition-all text-sm font-bold"
-                >
-                  {s.emoji}
-                </button>
-              ))}
+            <p className="text-white/28 text-xs max-w-[340px] mb-5">
+              AI Munim is a software subscription service. It does not provide any financial, lending, or investment services.
+            </p>
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs text-white/38"
+              style={{ background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.07)" }}>
+              🇮🇳 Made in India &nbsp;·&nbsp; Operated by Anup Pathak
             </div>
           </div>
 
-          {/* Product links */}
+          {/* Contact column */}
+          <div>
+            <p className="text-sm font-semibold text-white mb-5">Contact</p>
+            <ul className="space-y-4">
+              <li className="flex items-start gap-2.5">
+                <Mail className="w-4 h-4 text-[#00FFA3] mt-0.5 flex-shrink-0" />
+                <div>
+                  <p className="text-xs text-white/35 mb-0.5">Email Support</p>
+                  <a href="mailto:anup.kr.2908@gmail.com" className="text-sm text-white/65 hover:text-white transition-colors break-all">
+                    anup.kr.2908@gmail.com
+                  </a>
+                </div>
+              </li>
+              <li className="flex items-start gap-2.5">
+                <Clock className="w-4 h-4 text-[#00D4FF] mt-0.5 flex-shrink-0" />
+                <div>
+                  <p className="text-xs text-white/35 mb-0.5">Support Hours</p>
+                  <p className="text-sm text-white/65">Mon–Sat, 10 AM – 7 PM IST</p>
+                </div>
+              </li>
+              <li className="flex items-start gap-2.5">
+                <MapPin className="w-4 h-4 text-[#9B5DE5] mt-0.5 flex-shrink-0" />
+                <div>
+                  <p className="text-xs text-white/35 mb-0.5">Location</p>
+                  <p className="text-sm text-white/65">Buxar, Bihar, India</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          {/* Product + Legal links */}
           <div>
             <p className="text-sm font-semibold text-white mb-5">Product</p>
-            <ul className="space-y-3">
+            <ul className="space-y-3 mb-7">
               {productLinks.map((item) => (
                 <li key={item}>
                   <a href="#" className="text-sm text-white/38 hover:text-white/80 transition-colors">
@@ -68,10 +86,6 @@ export default function Footer() {
                 </li>
               ))}
             </ul>
-          </div>
-
-          {/* Legal links */}
-          <div>
             <p className="text-sm font-semibold text-white mb-5">Legal</p>
             <ul className="space-y-3">
               {legalLinks.map((item) => (
@@ -94,7 +108,7 @@ export default function Footer() {
             © {year} AI Munim. All rights reserved.
           </p>
           <p className="text-white/28 text-sm">
-            Made with ❤️ in 🇮🇳 India
+            Operated by: <span className="text-white/40">Anup Pathak (Individual Proprietor)</span>
           </p>
           <div className="flex items-center gap-2">
             <span className="w-2 h-2 rounded-full bg-[#00FFA3] animate-pulse" />
